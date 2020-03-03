@@ -1,4 +1,4 @@
-/* These are the styles for all pages */
+/* ALL PAGES */
 
 body{
   font-family: 'Open Sans';
@@ -74,12 +74,6 @@ header{
 
 #banner{
   height: 150px;
-  background-attachment: fixed;
-  background-position: center;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .navbar{
@@ -120,13 +114,15 @@ a:hover, a:focus{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 10%;
-  height: 30px;
+  min-width: 10%;
+  height: 40px;
   border-radius: 7px;
   background: #D3D3D3;
-  color: white;
   font-family: 'Indie Flower';
   font-size: 20px;
+  text-shadow: 
+      -1px -1px 1px rgba(255, 255, 255, 0.671), 
+      2px 2px 1px #36363667;
 }
 
 #button a{
@@ -141,7 +137,7 @@ footer{
   text-align: right;
 }
 
-/* These are the styles for specific elements on the index or home page */
+/* HOME PAGE (OR INDEX) */
 
 #resumeimg{
   display: block;
@@ -151,7 +147,20 @@ footer{
   border: 1.5px #AD5E99 solid;
 }
 
-/* These are the styles for specific elements on the projects page */
+/* PROJECTS PAGE */
+.plantshopper{
+  background-attachment: fixed; 
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-size: contain; /*I know this is usually cover sized but it stretched out the photo so I changed to contain*/
+  color: white;
+  height: 200px;                
+  background-image: url("../images/plantshopper.png");
+  background-color: white;
+  grid-column: 1 / -1;
+  grid-row: 2 / span 1;
+}
+
 #userflow{
   display: grid;
   grid-template-columns: 1/-1;
@@ -165,7 +174,7 @@ footer{
   width: 800px;
   height: 280px;
   perspective: 1000px;
-  padding-left: 200px;
+  padding-left: 50px;
 }
 
 .flip-card-inner {
@@ -200,16 +209,47 @@ footer{
   transform: rotateY(180deg);
 }
 
-/* These are the styles for specific elements on the writing page */
+/* WRITING PAGE */
 
-.hoosierabroad{
+.hoosierabroad, .insider{
   display: grid;
-  grid-template-columns: 300px 200px;
-  grid-template-rows: auto;
+  grid-template-columns: 500px 200px;
+  grid-template-rows: repeat(2, auto);
+  grid-row-gap: 15px;
   justify-content: center;
+  align-content: center;
 }
 
-/* These are the styles for specific elements on the activities page */
+.hatitle{
+  grid-column: 1/ span 1;
+  grid-row: 1/ span 1;
+}
+
+.hacontent{
+  grid-column: 1/ span 1;
+  grid-row: 2/ span 1;
+}
+
+.haimg{
+  grid-row: 1 / span 2;
+  grid-column: 2 / span 1;
+}
+
+.intitle{
+  grid-column: 2/ span 1;
+  grid-row: 1/ span 1;
+}
+
+.incontent{
+  grid-column: 2/ span 1;
+  grid-row: 2/ span 1;
+}
+
+.inimg{
+  grid-row: 1 / span 2;
+}
+
+/* ACTIVITIES PAGE */
 
 .snapshots{
   display: flex;
@@ -225,34 +265,22 @@ footer{
   height: 150px;
 }
 
-
-/* @media screen and (min-width: 850px){
-
-  .card {
-    flex-basis: 250px;
-  }
-
-  .card_big{
-    -webkit-transform: scaleX(1.12);
-            transform: scaleX(1.12);
-  } */
+@media only screen /* From https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ for iPads*/
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    /*PROJECTS PAGE*/
+    .flip-card {
+      padding-left: 150px;}
+}
 
 
-  /* header{
-    flex-direction: row;
-  }
-
-  .nav_links{
-    flex-direction: row;
-  }
-
-  .nav_item a{
-    padding: 10px;
-  }
-} */
-
-/* @media (prefers-reduced-motion: reduce){
-  #logo{
-      animation: none;
-  }
-} */
+@media screen /* From https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ for desktops with retina screens*/
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    /*PROJECTS PAGE*/
+    .flip-card {
+      padding-left: 250px;}
+}
