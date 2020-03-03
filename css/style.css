@@ -1,0 +1,214 @@
+/* These are the styles for all pages */
+
+body{
+  font-family: 'Open Sans';
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  background-color: white;
+}
+
+h1{
+  color: #AD5E99;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px; 
+  font-family: 'Indie Flower';
+}
+
+h2{
+  color: #839B3B;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Indie Flower';
+}
+
+h3{
+  color: #839B3B;
+  font-size: 20px;
+  text-align: left;
+  padding: 10px;  
+  margin-left: 40px;
+  font-family: 'Indie Flower';
+}
+
+p {
+  padding: 0 70px;
+  line-height: 1.5;
+}
+
+.list {
+  list-style-type: circle;
+  padding-left: 120px;
+  line-height: 1.5;
+}
+
+table{
+  border: 1.5px solid #AD5E99;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  width: 75%;
+  font-size: 16px;
+  line-height: 1.1;
+}
+
+.colhead{
+background-color: #AD5E99;
+color:white;
+text-align: center;
+font-family: 'Indie Flower';
+font-size: 20px;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #AD5E99;
+}
+
+#banner{
+  height: 150px;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.navbar{
+ display: flex;
+ flex-direction: row;
+ font-family: 'Indie Flower';
+ font-size: 20px;
+}
+
+.navbar p{
+    color:#AD5E99;
+    display: inline;
+    padding: 0;
+  }
+
+a{
+  color:#AD5E99;
+  text-decoration: none;
+}
+
+a:hover, a:focus{
+  color: #839B3B;
+  text-decoration: underline;
+  text-decoration-style: double;
+}
+
+#current{
+  color: #AD5E99;
+  text-decoration: underline;
+  text-decoration-style: double;
+}
+
+.navitem a{
+  padding: 10px;
+}
+
+#button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  height: 30px;
+  border-radius: 7px;
+  background: #D3D3D3;
+  color: white;
+  font-family: 'Indie Flower';
+  font-size: 20px;
+}
+
+#button a{
+  font-weight: bold;
+}
+
+footer{
+  background-color: #AD5E99;
+  font-size: 10px;
+  color: white;
+  padding: 10px;
+  text-align: right;
+}
+
+/* These are the styles for specific elements on the index page */
+
+#resumeimg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: 1.5px #AD5E99 solid;
+}
+
+/* These are the styles for specific elements on the projects page */
+
+#userflow{
+  display: grid;
+  grid-template-columns: 1/-1;
+  width:70%;
+  align-items: center;
+}
+
+/* These are the styles for specific elements on the writing page */
+
+.hoosierabroad{
+  display: grid;
+  grid-template-columns: 300px 200px;
+  grid-template-rows: auto;
+  justify-content: center;
+}
+
+/* These are the styles for specific elements on the activities page */
+
+.snapshots{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.snapshots > img{
+  border: 3px #AD5E99 solid;
+  margin: 5px;
+  width: 200px;
+  height: 150px;
+}
+
+
+/* @media screen and (min-width: 850px){
+
+  .card {
+    flex-basis: 250px;
+  }
+
+  .card_big{
+    -webkit-transform: scaleX(1.12);
+            transform: scaleX(1.12);
+  } */
+
+
+  /* header{
+    flex-direction: row;
+  }
+
+  .nav_links{
+    flex-direction: row;
+  }
+
+  .nav_item a{
+    padding: 10px;
+  }
+} */
+
+/* @media (prefers-reduced-motion: reduce){
+  #logo{
+      animation: none;
+  }
+} */
