@@ -1,5 +1,4 @@
 /* ALL PAGES */
-
 body{
   font-family: 'Open Sans';
   margin: 0;
@@ -78,7 +77,7 @@ header{
 
 .navbar{
  display: flex;
- flex-direction: row;
+ flex-direction: column;
  font-family: 'Indie Flower';
  font-size: 20px;
 }
@@ -251,36 +250,110 @@ footer{
 
 /* ACTIVITIES PAGE */
 
-.snapshots{
+.activity{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-}
+} 
 
-.snapshots > img{
+/* Got the below cool animation from https://tympanus.net/codrops/2011/11/02/original-hover-effects-with-css3/ */
+/* Resized my images using https://www.imgonline.com.ua/eng/resize-image.php */
+
+.snapshots {
+  width: 300px;
+  height: 200px;
+  margin: 10px;
   border: 3px #AD5E99 solid;
-  margin: 5px;
-  width: 200px;
-  height: 150px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  box-shadow: 1px 1px 2px #e6e6e6;
+  cursor: default;
+  background: #fff;
+  animation: mymove 5s infinite;
+  animation-iteration-count: 1;
 }
 
-@media only screen /* From https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ for iPads*/
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    /*PROJECTS PAGE*/
-    .flip-card {
-      padding-left: 150px;}
+.snapshots .mask {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0
+}
+.snapshots img {
+  display: block;
+  position: relative;
+  transition: all 0.2s linear;
+  animation-name: example;
+
+}
+.snapshots h2 {
+  color: #000000;
+  text-align: center;
+  position: relative;
+  font-size: 25px;
+  padding: 10px;
+  background: rgba(131,155,59, 0.8);
+  margin: 20px 0 0 0;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.snapshots p {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  position: relative;
+  color: #fff;
+  padding: 10px 20px 20px;
+  text-align: center;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.2s linear;
 }
 
-
-@media screen /* From https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ for desktops with retina screens*/
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    /*PROJECTS PAGE*/
-    .flip-card {
-      padding-left: 250px;}
+.snapshots .mask {
+  opacity: 0;
+  background-color: rgba(173, 94, 153, 0.7); 
+  transition: all 0.4s ease-in-out;
 }
+
+.snapshots:hover img { 
+	transform: scale(1.1);
+} 
+.snapshots:hover .mask { 
+	opacity: 1;
+}
+.snapshots:hover h2,
+.snapshots:hover p {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.snapshots:hover p {
+    transition-delay: 0.1s;
+}
+
+@keyframes mymove {
+  from {left: 300px;}
+  to {left: 0px;}
+
+@media screen and (min-width: 800px){
+  /*HOME PAGE*/
+  .navbar{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Indie Flower';
+    font-size: 20px;
+   }  
+  
+  /*PROJECTS PAGE*/
+  .flip-card {
+    padding-left: 150px;}
+
+}
+/* Things to look into for changing on mobile then having what's in code now for desktop: flipchart, table, parallalex; 
