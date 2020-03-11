@@ -8,14 +8,35 @@ body{
 }
 
 h1{
-  color: #AD5E99;
+  color: #AA5596;
   font-size: 30px;
   text-align: center;
   padding: 10px; 
   font-family: 'Indie Flower';
+  animation: titleanim 0.5s linear both;
 }
 
-h2{
+/* Got the animation code / idea from here: https://css-tricks.com/css-animation-libraries/ */
+
+@keyframes titleanim {
+  0% {
+    transform: scale(1) rotate3d(-1, 1, 0, -180deg);
+  }
+  50% {
+    transform: scale(0.4) rotate3d(-1, 1, 0, -90deg);
+  }
+  100% {
+    transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  #titleanim{
+      animation: none;
+  }
+}
+
+h2, legend{
   color: #839B3B;
   font-size: 25px;
   text-align: center;
@@ -44,7 +65,7 @@ p {
 }
 
 table{
-  border: 1.5px solid #AD5E99;
+  border: 1.5px solid #AA5596;
   margin-left: auto;
   margin-right: auto;
   border-radius: 20px;
@@ -54,7 +75,7 @@ table{
 }
 
 .colhead{
-background-color: #AD5E99;
+background-color: #AA5596;
 color:white;
 text-align: center;
 font-family: 'Indie Flower';
@@ -68,7 +89,7 @@ header{
   justify-content: space-between;
   background: white;
   padding-bottom: 10px;
-  border-bottom: 2px solid #AD5E99;
+  border-bottom: 2px solid #AA5596;
 }
 
 #banner{
@@ -83,13 +104,13 @@ header{
 }
 
 .navbar p{
-    color:#AD5E99;
+    color:#AA5596;
     display: inline;
     padding: 0;
   }
 
 a{
-  color:#AD5E99;
+  color:#AA5596;
   text-decoration: none;
 }
 
@@ -100,7 +121,7 @@ a:hover, a:focus{
 }
 
 #current{
-  color: #AD5E99;
+  color: #AA5596;
   text-decoration: underline;
   text-decoration-style: double;
 }
@@ -109,7 +130,7 @@ a:hover, a:focus{
   padding: 10px;
 }
 
-#button{
+#button, #submit{
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -129,12 +150,13 @@ a:hover, a:focus{
 }
 
 footer{
-  background-color: #AD5E99;
+  background-color: #AA5596;
   font-size: 10px;
   color: white;
   padding: 10px;
   text-align: right;
 }
+
 
 /* HOME PAGE (OR INDEX) */
 
@@ -143,7 +165,7 @@ footer{
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  border: 1.5px #AD5E99 solid;
+  border: 1.5px #AA5596 solid;
 }
 
 /* PROJECTS PAGE */
@@ -203,7 +225,7 @@ footer{
 }
 
 .flip-card-back {
-  background-color: #AD5E99;
+  background-color: #AA5596;
   color: white;
   transform: rotateY(180deg);
 }
@@ -264,7 +286,7 @@ footer{
   width: 300px;
   height: 200px;
   margin: 10px;
-  border: 3px #AD5E99 solid;
+  border: 3px #AA5596 solid;
   float: left;
   overflow: hidden;
   position: relative;
@@ -287,9 +309,6 @@ footer{
 .snapshots img {
   display: block;
   position: relative;
-  transition: all 0.2s linear;
-  animation-name: example;
-
 }
 .snapshots h2 {
   color: #000000;
@@ -338,9 +357,21 @@ footer{
     transition-delay: 0.1s;
 }
 
-@keyframes mymove {
+/* @keyframes mymove {
   from {left: 300px;}
-  to {left: 0px;}}
+  to {left: 0px;}} */
+
+/* CONTACT PAGE */
+
+#contactform{
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+
+
+
 
 @media screen and (min-width: 800px){
   /*HOME PAGE*/
