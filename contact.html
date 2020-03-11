@@ -25,16 +25,60 @@
           <ul class="navbar">
             <li class="navitem"><a href="index.html">About</a><p>&#8226</p></li>
             <li class="navitem"><a href="projects.html">Projects</a><p>&#8226</p></li>
-            <li class="navitem"><a href="#writing">Writing</a><p>&#8226</p></li>
+            <li class="navitem"><a href="writing.html">Writing</a><p>&#8226</p></li>
             <li class="navitem"><a href="activities.html">Activities</a><p>&#8226</p></li>
-            <li class="navitem"><a href="contact.html" id = "current">Contact</a><p></p></li>
+            <li class="navitem"><a href="#contact" id = "current">Contact</a><p></p></li>
           </ul>
           </nav>
     </header>
-
   <main>
-
-    </main>
+    <h1 class="contact" id="contact">Contact Me</h1>
+    <center><p>I would love to hear from you. Please fill out the form below and I will get back to you as soon as I can.</p></center>
+    <form action = "contactme" method = "post" id = "contactform">
+      <fieldset>
+        <legend>Contact Form</legend>
+        <label for ="name">Name*</label>
+        <input type = "text" id = "name" required name = "name">
+        <br><br>
+        <label for = "email">Email*</label>
+        <input type = "email" required name = "email">
+        <br><br>
+        <label for = "title">Title</label>
+        <input type = "text" id = "title">
+        <br><br>
+        <label for = "portfolio">Portfolio</label>
+        <input type = "url" id = "portfolio" value = "https://">
+        <br><br>
+        <div>
+          <p>How did you find this portfolio?</p>
+          <label>
+            <input type="radio" name ="findport" value = "class" id="port"> SI 539 Class
+          </label><br><br>
+          <label>
+             <input type="radio" name ="findport" value = "search" id="port"> Internet Search
+          </label><br><br>
+          <label>
+             <input type="radio" name ="findport" value = "application" id="port"> Application
+          </label><br><br>
+          <label>
+            <input type="radio" name ="findport" value = "friend" id="port"> Friend or Colleague
+          </label><br><br>
+          <label>
+             <input type="radio" name ="findport" value = "other" id="other"> Other
+          </label><br><br>
+      </div>
+      <br>
+        <label for = "message">Message*</label>
+        <input type="textarea" id = "message" required name = "message">
+        <br><br>
+        <p>*Required</p>
+        <br><br>
+        <input type = "submit" id = "submit" value = "Submit">
+        <br><br>
+      </fieldset>
+    </form>
+    <br>
+  </main>
     <footer>
         &copy; Stephanie Simpson 2020
     </footer>
