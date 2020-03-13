@@ -1,4 +1,27 @@
 /* ALL PAGES */
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+  top: -40px;
+}
+
+.skip a:focus {
+  position: absolute;
+  top: 0px;
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  .skip a{
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
 body{
   font-family: 'Open Sans';
   margin: 0;
@@ -54,14 +77,9 @@ h3{
 }
 
 p {
-  padding: 0 70px;
+  padding: 0 60px;
   line-height: 1.5;
-}
-
-.list {
-  list-style-type: circle;
-  padding-left: 120px;
-  line-height: 1.5;
+  text-align: left;
 }
 
 table{
@@ -80,6 +98,11 @@ color:white;
 text-align: center;
 font-family: 'Indie Flower';
 font-size: 20px;
+padding: 8px;
+}
+
+td{
+  padding: 8px;
 }
 
 header{
@@ -90,6 +113,10 @@ header{
   background: white;
   padding-bottom: 10px;
   border-bottom: 2px solid #AA5596;
+}
+
+.navbar .bullet{
+  display: none;
 }
 
 #banner{
@@ -145,10 +172,6 @@ a:hover, a:focus{
       2px 2px 1px #36363667;
 }
 
-#button a{
-  font-weight: bold;
-}
-
 footer{
   background-color: #AA5596;
   font-size: 10px;
@@ -160,42 +183,82 @@ footer{
 
 /* HOME PAGE (OR INDEX) */
 
-#resumeimg{
+.resume img {
+  display: block;
+  position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 95%;
+  height: auto;
   border: 1.5px #AA5596 solid;
 }
 
+/* Got the social media icon code from here: https://codepen.io/CF-251/pen/eGZLYV */
+
+body {
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper i {
+  padding: 10px;
+  text-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+  transition: all ease-in-out 150ms;
+}
+.wrapper a:nth-child(1) {
+  color: #0072b1;
+}
+.wrapper a:nth-child(2) {
+  color: #C13584;
+}
+.wrapper a:nth-child(3) {
+  color: #1DA1F2;
+}
+.wrapper i:hover {
+  margin-top: -3px;
+  text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
+}
+
+
 /* PROJECTS PAGE */
+
+#projectdeets{
+  text-align: center;
+}
+
 .plantshopper{
   background-attachment: fixed; 
   background-position: center;  
   background-repeat: no-repeat; 
-  background-size: contain; /*I know this is usually cover sized but it stretched out the photo so I changed to contain*/
+  background-size: cover;
   color: white;
   height: 200px;                
-  background-image: url("../images/plantshopper.png");
+  background-image: url("../images/plants.jpg");
   background-color: white;
-  grid-column: 1 / -1;
-  grid-row: 2 / span 1;
 }
 
-#userflow{
-  display: grid;
-  grid-template-columns: 1/-1;
+/* Plant image from: https://www.google.com/search?q=plants+wallpaper&tbm=isch&ved=2ahUKEwj_3puGoJjoAhVDWawKHYk-BPEQ2-cCegQIABAA&oq=plant&gs_l=img.1.0.0i67l3j0j0i67l4j0j0i67.26538.26996..28827...0.0..0.115.556.0j5......0....1..gws-wiz-img.......0i131.fZXjnv4RgSA&ei=vOdrXv-QKsOysQWJ_ZCIDw&bih=561&biw=1263&safe=active&hl=en#imgrc=YegVvcalAo2xfM */
+
+#userflow, #plantshopper{
   width:100%;
-  align-items: center;
+  min-height: 280px;
 }
 
 /* Thanks to W3 schools for helping with the following code to make a flip card */
 .flip-card {
   background-color: transparent;
-  width: 800px;
+  width: 80%;
   height: 280px;
   perspective: 1000px;
-  padding-left: 50px;
+  padding-left: 15%;
+  overflow: hidden;
+  justify-items: center
 }
 
 .flip-card-inner {
@@ -228,6 +291,7 @@ footer{
   background-color: #AA5596;
   color: white;
   transform: rotateY(180deg);
+  padding: 70px 0;
 }
 
 /* WRITING PAGE */
@@ -241,33 +305,20 @@ footer{
   align-content: center;
 }
 
-.hatitle{
+.title{
   grid-column: 1/ span 1;
   grid-row: 1/ span 1;
 }
 
-.hacontent{
+.content{
   grid-column: 1/ span 1;
   grid-row: 2/ span 1;
 }
 
-.haimg{
+.image{
+  width: 100%;
   grid-row: 1 / span 2;
   grid-column: 2 / span 1;
-}
-
-.intitle{
-  grid-column: 2/ span 1;
-  grid-row: 1/ span 1;
-}
-
-.incontent{
-  grid-column: 2/ span 1;
-  grid-row: 2/ span 1;
-}
-
-.inimg{
-  grid-row: 1 / span 2;
 }
 
 /* ACTIVITIES PAGE */
@@ -294,8 +345,6 @@ footer{
   box-shadow: 1px 1px 2px #e6e6e6;
   cursor: default;
   background: #fff;
-  animation: mymove 5s infinite;
-  animation-iteration-count: 1;
 }
 
 .snapshots .mask {
@@ -373,18 +422,82 @@ footer{
 
 
 
-@media screen and (min-width: 800px){
+
+
+
+
+/* TABLET SIZE */
+@media screen and (min-width: 768px){
   /*HOME PAGE*/
-  .navbar{
+  body{
+    font-family: 'Open Sans';
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: grey;
+  }
+
+  p {
+    padding: 0 95px;
+  }
+  
+  
+  header{
     display: flex;
     flex-direction: row;
-    font-family: 'Indie Flower';
-    font-size: 20px;
-   }  
+    align-items: center;
+  }
   
-  /*PROJECTS PAGE*/
-  .flip-card {
-    padding-left: 150px;}
+  .navbar{
+   display: flex;
+   flex-direction: row;
+  }
 
+  .navbar .bullet{
+      display: inline;
+    }
+  
+  /* HOME PAGE (OR INDEX) */
+  
+  .resume img {
+    width: 75%;
+  }
+
+  /* PROJECTS PAGE */
+  /* .flip-card {
+    padding-left: 110px;
+  } */
 }
-/* Things to look into for changing on mobile then having what's in code now for desktop: flipchart, table, parallalex; 
+  
+  
+
+
+
+
+
+
+
+
+
+/* LAPTOP SIZE */
+@media screen and (min-width: 1366px){
+  /*HOME PAGE*/
+  body{
+    background-color: darkorange;
+  }
+  p {
+    padding: 0 110px;
+  }
+  
+  
+  /* HOME PAGE (OR INDEX) */
+  
+  .resume img {
+    width: 50%;
+  }
+
+  /* PROJECTS PAGE */
+  /* .flip-card {
+    padding-left: 15%;
+  } */
+}
