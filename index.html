@@ -16,24 +16,27 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans|Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Stephanie Simpson Portfolio</title>
   </head>
-  <body>
+  
+  <body>  
+  <main>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <header>
       <img src="images/banner.jpg" alt="portfolio banner" id = "banner">
       <nav>
         <ul class="navbar">
-          <li class="navitem"><a href="#about" id = "current">About</a><p>&#8226</p></li> 
-          <li class="navitem"><a href="projects.html">Projects</a><p>&#8226</p></li> 
-          <li class="navitem"><a href="writing.html">Writing</a><p>&#8226</p></li> 
-          <li class="navitem"><a href="activities.html">Activities</a><p>&#8226</p></li> 
+          <li class="navitem"><a href="#main" id = "current">About</a><p class = 'bullet'>&#8226;</p></li> 
+          <li class="navitem"><a href="projects.html">Projects</a><p class = 'bullet'>&#8226;</p></li> 
+          <li class="navitem"><a href="writing.html">Writing</a><p class = 'bullet'>&#8226;</p></li> 
+          <li class="navitem"><a href="activities.html">Activities</a><p class = 'bullet'>&#8226;</p></li> 
           <li class="navitem"><a href="contact.html">Contact</a><p></p></li> 
         </ul>
         </nav>
   </header>
 
-  <main>
-    <h1 class="about" id="about">About Me</h1>
+    <h1 id="main">About Me</h1>
     <div>
     <p>I am a masters student studying business and user experience design. I graduated from Indiana University in 2014 where she majored in Marketing, Supply Chain Management, and Technology Management. After undergrad, I worked as a technology consultant for Deloitte Consulting, and this past summer I was the Data Analyst intern at CVS Health. At school I am involved with the <a href="https://ross.campusgroups.com/rtc/home/">Ross Tech Club</a>, <a href="https://ross.campusgroups.com/designplusbusiness/home/">Design + Business Club - Story Lab</a>, and <a href="https://ross.campusgroups.com/rossofb/home/">Ross Out for Business Club</a>. Based on my experience and interests, I aim to bridge the gap between front end designers / researchers and back end data strategists.</p>
     <br>
@@ -42,15 +45,24 @@
     <p>In my spare time, I love to travel. My favorite travel destination is Greece, where I have visited three times. I event spent a summer at an archaeological dig on the island of Patmos during undergrad. I also love to get lost in a good book and snuggle with my two cats (Hazelnut and Dax). </p>
     </div>
     <br><br>
-    <h2 class="resume" id="resume">Resume</h2>
-        <button id="button"><a href="https://drive.google.com/file/d/1F-Lvw8uun9wgjOzigGWBkh2NQ9V30QVp/view">Download</a></button>
+    <h2>Let's Connect</h2>
+    <div class="wrapper">
+      <a href="https://www.linkedin.com/in/stephaniesimpson16/"><i class="fa fa-3x fa-linkedin-square"></i></a>
+      <a href="https://www.instagram.com/stephsimpson16/"><i class="fa fa-3x fa-instagram"></i></a>
+      <a href="https://twitter.com/stesimpson16"><i class="fa fa-3x fa-twitter-square"></i></a>
+    </div>
+    <br><br>
+    <h2>Resume</h2>
+        <button id="button" onclick="window.location.href = 'https://drive.google.com/file/d/1F-Lvw8uun9wgjOzigGWBkh2NQ9V30QVp/view';">Download</button>
         <br><br>
-        <img id="resumeimg" src="images/resume.png" alt="stephanie simpson resume" />
+        <div class="resume" >
+          <img src="images/resume.png" alt="stephanie simpson resume" />
+          </div>
         <br>
     </main>
 
     <footer>
         &copy; Stephanie Simpson 2020
     </footer>
-  </body>
+  </body> 
 </html>
