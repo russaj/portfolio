@@ -19,29 +19,29 @@
     <title>Stephanie Simpson Portfolio</title>
   </head>
   <body>
+    <main>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <header>
         <img src="images/banner.jpg" alt="portfolio banner" id = "banner">
         <nav>
           <ul class="navbar">
-            <li class="navitem"><a href="index.html">About</a><p>&#8226</p></li> 
-            <li class="navitem"><a href="#projects" id = "current">Projects</a><p>&#8226</p></li> 
-            <li class="navitem"><a href="writing.html">Writing</a><p>&#8226</p></li> 
-            <li class="navitem"><a href="activities.html">Activities</a><p>&#8226</p></li>
+            <li class="navitem"><a href="index.html">About</a><p class = 'bullet'>&#8226;</p></li> 
+            <li class="navitem"><a href="#main" id = "current">Projects</a><p class = 'bullet'>&#8226;</p></li> 
+            <li class="navitem"><a href="writing.html">Writing</a><p class = 'bullet'>&#8226;</p></li> 
+            <li class="navitem"><a href="activities.html">Activities</a><p class = 'bullet'>&#8226;</p></li>
             <li class="navitem"><a href="contact.html">Contact</a><p></p></li> 
           </ul>
           </nav>
     </header>
 
-  <main>
-    <h1 class="projects" id="projects">Projects</h1>
+    <h1 id="main">Projects</h1>
     <h2>PlantShopper App</h2>
-    <center><i>September - December, 2019 | UX Research, UX Design</center></i><br><br>
-    <p>For my Interaction Design (SI 582) course, I participated in a semester-long project with the goal of going through every phase of the product design process, from ideation through prototyping. In the end, I created PlantShopper - an app that can be used to find vegan products in supermarkets.</p><br>
+    <p id="projectdeets">September - December, 2019 | UX Research, UX Design</p><br>
     <div class = "plantshopper"></div><br><br>
+    <h3>Context</h3>
+    <p>For my Interaction Design (SI 582) course, I participated in a semester-long project with the goal of going through every phase of the product design process, from ideation through prototyping. In the end, I created PlantShopper - an app that can be used to find vegan products in supermarkets.</p><br>
     <h3>Problem Statement</h3>
-    <p>The first step of the process was to identify a list of problems that I wanted to solve, ultimately landing on one problem that could be synthesized into a clear goal. 
-    <br><br>
-    As a vegan for many years, it has been hard to purchase foods - especially processed foods - in the supermarket because there are many animal by-product ingredients with long names that I just don’t understand or know (such as casein, gelatin, isinglass, L. Cysteine, etc.). While the ‘vegan’ icon exists on many products, it does not exist on all even though some products may be vegan (did you know Oreos were vegan?). There are many vegan apps on the market such as Happy Cow to find vegan and vegetarian friendly restaurants, but the apps to find vegan products are few and have some major challenges such as an ineffective user interface or inaccurate information.
+    <p>The first step of the process was to identify a list of problems that I wanted to solve, ultimately landing on one problem that could be synthesized into a clear goal. As a vegan for many years, it has been hard to purchase foods - especially processed foods - in the supermarket because there are many animal by-product ingredients with long names that I just don’t understand or know (such as casein, gelatin, isinglass, L. Cysteine, etc.). While the ‘vegan’ icon exists on many products, it does not exist on all even though some products may be vegan (did you know Oreos were vegan?). There are many vegan apps on the market such as Happy Cow to find vegan and vegetarian friendly restaurants, but the apps to find vegan products are few and have some major challenges such as an ineffective user interface or inaccurate information.
     <br><br>
     <table>
       <thead>
@@ -60,12 +60,7 @@
       </tbody>
     </table>
     <h3>Needfinding Interviews</h3>
-    <p>I conducted a combination of in-person and digital surveys to reach the vegan community and understand their major challenges. After identifying demographics such as name, age group, professional status, vegan status - I asked the following questions:</p>
-        <ul class="list"><li>What is the hardest part about being vegan?</li>
-        <li>How do you get information on vegan foods?</li>
-        <li>What challenges do you face when eating out?</li>
-        <li>What challenges do you face when grocery shopping?</li></ul>
-    <p>While these interviews did corroborate my initially identified problem, I realized there were also a handful of other challenges that could also be tackled with this app. Vegans did not feel like they had a community - people to share recipes, to share feedback on products. </p>
+    <p>I conducted a combination of in-person and digital surveys to reach the vegan community and understand their major challenges. After identifying demographics such as name, age group, professional status, vegan status. While these interviews did corroborate my initially identified problem, I realized there were also a handful of other challenges that could also be tackled with this app. Vegans did not feel like they had a community - people to share recipes, to share feedback on products. </p>
     <h3>Sketching and Scenarios</h3>
     <p>Now with more of an idea of what issues vegan users had in their daily life, I went to the drawing board (or sketch book, if you will) to try to see what this app would look like and how a scenario would play out.
     <br><br>
@@ -86,19 +81,21 @@
     </div>
     <h3>Prototyping</h3>
     <p>A paper prototype was created for initial user testing where the testers were given three tasks to perform with the paper prototype and offer feedback. The digital prototype was then created in Adobe XD from this information and further user testing was conducted to perform the same tasks to determine any problem areas.</p>
-
-    <button id="button"><a href="https://xd.adobe.com/view/e35cd4e0-68ed-4b04-46de-8c4f451bae47-956d/?fullscreen">Prototype</a></button><br>
+    <br>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img id="plantshopper" src="images/plantshopper.png" alt="plantshopper digital prototype"/>
+        </div>
+        <div class="flip-card-back">
+          <p>This is an example of what the digital protype looks like. By clicking the button below, you will be taken to the ditigal prototype where you can click around to undersatnd the user flow.</p>
+        </div></div></div>
+    <br>
+    <button id="button" onclick="window.location.href = 'https://xd.adobe.com/view/e35cd4e0-68ed-4b04-46de-8c4f451bae47-956d/?fullscreen';">Prototype</button><br>
     <h3>Learnings</h3>
     <p>This semester-long project taught me how important user research and user testing are to creating a successful product. The initial idea I had for PlantShopper completely evolved based on what I discovered vegans actually needed and my initial designs changed when users had trouble understanding how to perform certain tasks. </p>
     <h3>Next Steps</h3>
-    <p>I would like to continue work on this project, and some of the next steps are as follows:</p>
-      <ul class = "list">
-        <li>Conduct usability tests with the digital prototype</li>
-        <li>Conduct more user interviews to make any feature enhancements</li>
-        <li>Work with a developer to build out the app and integrate relevant data needed for identifying vegan foods based off bar codes</li>
-        <li>Conduct field tests with the app</li>
-      </ul>
-
+    <p>I would like to continue work on this project. I want to conduct usability tests with the digital prototype and conduct more user interviews to make any feature enhancements. In addition, I want to work with a developer to build out the app and integrate relevant data needed for identifying vegan foods based off bar codes.
   </main>
 
     <footer>
