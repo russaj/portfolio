@@ -53,7 +53,7 @@ h1{
   }
 }
 
-h2, legend{
+h2, legend, label{
   color: #839B3B;
   font-size: 25px;
   text-align: center;
