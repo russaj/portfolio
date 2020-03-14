@@ -53,12 +53,6 @@ h1{
   }
 }
 
-@media (prefers-reduced-motion: reduce){
-  #titleanim{
-      animation: none;
-  }
-}
-
 h2, legend{
   color: #839B3B;
   font-size: 25px;
@@ -298,7 +292,7 @@ body {
 
 .hoosierabroad, .insider{
   display: grid;
-  grid-template-columns: 400px 100px;
+  grid-template-columns: 300px 100px;
   grid-template-rows: repeat(2, auto);
   grid-row-gap: 15px;
   justify-content: center;
@@ -481,7 +475,7 @@ textarea {
   
   header{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
@@ -510,6 +504,8 @@ textarea {
   
   
 
+
+
 /* LAPTOP SIZE */
 @media screen and (min-width: 1366px){
   p {
@@ -517,7 +513,15 @@ textarea {
   }
  
   header{
-    justify-content: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar{
+   display: flex;
+   flex-direction: row;
   }
   
   /* HOME PAGE (OR INDEX) */
@@ -531,4 +535,18 @@ textarea {
       grid-template-columns: 900px 200px;
     }
 
+}
+
+
+
+
+@media screen and (prefers-reduced-motion: reduce){
+  .skip a {
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .titleanim {
+    animation: none;
+  }
 }
