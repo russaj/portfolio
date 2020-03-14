@@ -82,6 +82,10 @@ p {
   text-align: left;
 }
 
+#center{
+  text-align: center;
+}
+
 table{
   border: 1.5px solid #AA5596;
   margin-left: auto;
@@ -228,10 +232,6 @@ body {
 
 /* PROJECTS PAGE */
 
-#projectdeets{
-  text-align: center;
-}
-
 .plantshopper{
   background-attachment: fixed; 
   background-position: center;  
@@ -291,14 +291,14 @@ body {
   background-color: #AA5596;
   color: white;
   transform: rotateY(180deg);
-  padding: 70px 0;
+  padding: 50px 0;
 }
 
 /* WRITING PAGE */
 
 .hoosierabroad, .insider{
   display: grid;
-  grid-template-columns: 500px 200px;
+  grid-template-columns: 400px 100px;
   grid-template-rows: repeat(2, auto);
   grid-row-gap: 15px;
   justify-content: center;
@@ -319,6 +319,7 @@ body {
   width: 100%;
   grid-row: 1 / span 2;
   grid-column: 2 / span 1;
+  justify-content: center;
 }
 
 /* ACTIVITIES PAGE */
@@ -329,6 +330,12 @@ body {
   align-items: center;
   justify-content: center;
 } 
+
+.list{
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 10%;
+}
 
 /* Got the below cool animation from https://tympanus.net/codrops/2011/11/02/original-hover-effects-with-css3/ */
 /* Resized my images using https://www.imgonline.com.ua/eng/resize-image.php */
@@ -412,13 +419,53 @@ body {
 
 /* CONTACT PAGE */
 
-#contactform{
-  display: grid;
-  height: 100vh;
-  place-items: center;
+/* Got the form design from here: https://codepen.io/ZachSaucier/pen/AIJpe */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+  color:black;
+  font-family: 'Open Sans';
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #AA5596;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
 }
 
+.feedback-input:focus { border:2px solid #AA5596; }
 
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Indie Flower';
+  width: 100%;
+  background:#AA5596;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#AA5596; }
 
 
 
@@ -428,24 +475,15 @@ body {
 
 /* TABLET SIZE */
 @media screen and (min-width: 768px){
-  /*HOME PAGE*/
-  body{
-    font-family: 'Open Sans';
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    background-color: grey;
-  }
-
   p {
     padding: 0 95px;
   }
-  
   
   header{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
   
   .navbar{
@@ -463,32 +501,24 @@ body {
     width: 75%;
   }
 
-  /* PROJECTS PAGE */
-  /* .flip-card {
-    padding-left: 110px;
-  } */
+  /* WRITING PAGE */
+  .hoosierabroad, .insider{
+    grid-template-columns: 500px 200px;
+  }
+
 }
   
   
 
-
-
-
-
-
-
-
-
 /* LAPTOP SIZE */
 @media screen and (min-width: 1366px){
-  /*HOME PAGE*/
-  body{
-    background-color: darkorange;
-  }
   p {
-    padding: 0 110px;
+    padding: 0 200px;
   }
-  
+ 
+  header{
+    justify-content: none;
+  }
   
   /* HOME PAGE (OR INDEX) */
   
@@ -496,8 +526,9 @@ body {
     width: 50%;
   }
 
-  /* PROJECTS PAGE */
-  /* .flip-card {
-    padding-left: 15%;
-  } */
+    /* WRITING PAGE */
+    .hoosierabroad, .insider{
+      grid-template-columns: 900px 200px;
+    }
+
 }
