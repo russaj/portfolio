@@ -407,10 +407,6 @@ body {
     transition-delay: 0.1s;
 }
 
-/* @keyframes mymove {
-  from {left: 300px;}
-  to {left: 0px;}} */
-
 /* CONTACT PAGE */
 
 /* Got the form design from here: https://codepen.io/ZachSaucier/pen/AIJpe */
@@ -546,7 +542,7 @@ textarea {
     transition: none;
   }
 
-  .titleanim {
+  h1 {
     animation: none;
   }
 }
