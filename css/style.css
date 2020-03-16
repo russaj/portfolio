@@ -545,4 +545,10 @@ textarea {
   h1 {
     animation: none;
   }
+
+  * {
+    animation-duration: 0s;
+    transition: none;
+   scroll-behavior: auto;;
+}
 }
