@@ -252,7 +252,7 @@ body {
   perspective: 1000px;
   padding-left: 15%;
   overflow: hidden;
-  justify-items: center
+  justify-items: center;
 }
 
 .flip-card-inner {
@@ -506,6 +506,10 @@ textarea {
 @media screen and (min-width: 1366px){
   p {
     padding: 0 200px;
+  }
+
+  h3{
+    margin-left: 150px;
   }
  
   header{
